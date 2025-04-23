@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorial-basics/application" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">📦 Panel Application: Gestiona Almacenamiento y Recursos Web | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://alexsandraroldan.github.io/Docusaurus/img/detective.png"><meta data-rh="true" name="twitter:image" content="https://alexsandraroldan.github.io/Docusaurus/img/detective.png"><meta data-rh="true" property="og:url" content="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/application"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="📦 Panel Application: Gestiona Almacenamiento y Recursos Web | My Site"><meta data-rh="true" name="description" content="El panel Application en las DevTools te permite inspeccionar, modificar y depurar los diferentes tipos de almacenamiento y recursos que utiliza una aplicación web. Es fundamental para trabajar con PWA, cookies, tokens, bases de datos locales y otros recursos que persisten entre sesiones."><meta data-rh="true" property="og:description" content="El panel Application en las DevTools te permite inspeccionar, modificar y depurar los diferentes tipos de almacenamiento y recursos que utiliza una aplicación web. Es fundamental para trabajar con PWA, cookies, tokens, bases de datos locales y otros recursos que persisten entre sesiones."><link data-rh="true" rel="icon" href="/Docusaurus/img/detective.png"><link data-rh="true" rel="canonical" href="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/application"><link data-rh="true" rel="alternate" href="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/application" hreflang="en"><link data-rh="true" rel="alternate" href="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/application" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Docusaurus/blog/rss.xml" title="My Site RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Docusaurus/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/Docusaurus/assets/css/styles.b33f71c0.css">
+<script src="/Docusaurus/assets/js/runtime~main.29ed6ae5.js" defer="defer"></script>
+<script src="/Docusaurus/assets/js/main.4d3d0eb6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Docusaurus/img/detective.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Docusaurus/"><div class="navbar__logo"><img src="/Docusaurus/img/detective.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Docusaurus/img/detective.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Inspector</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Docusaurus/docs/intro">Informacion</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/AlexsandraRoldan/Docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sidebar-icon-intro"><a class="menu__link" href="/Docusaurus/docs/intro">¿Qué es el Inspector?</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item sidebar-icon-basics"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Docusaurus/docs/tutorial-basics/create-a-document">Herramientas</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/create-a-document">Elements</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/create-a-page">Console</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/create-a-blog-post">Sources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/deploy-your-site">Network</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/congratulations">Performance</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/memory">Memory</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Docusaurus/docs/tutorial-basics/application">Application</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/Privacy-and-security">Privacy and security</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/Lighthouse">Lighthouse</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/Recorder">Recorder</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Docusaurus/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Herramientas</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Application</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>📦 Panel Application: Gestiona Almacenamiento y Recursos Web</h1></header>
+<p>El panel <strong>Application</strong> en las DevTools te permite inspeccionar, modificar y depurar los diferentes tipos de almacenamiento y recursos que utiliza una aplicación web. Es fundamental para trabajar con <strong>PWA</strong>, <strong>cookies</strong>, <strong>tokens</strong>, <strong>bases de datos locales</strong> y otros recursos que persisten entre sesiones.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-para-qué-sirve">🎯 ¿Para qué sirve?<a href="#-para-qué-sirve" class="hash-link" aria-label="Direct link to 🎯 ¿Para qué sirve?" title="Direct link to 🎯 ¿Para qué sirve?">​</a></h2>
+<ul>
+<li>Ver y modificar <strong>cookies</strong> y <strong>almacenamiento local</strong></li>
+<li>Revisar recursos como <strong>manifiestos</strong>, <strong>archivos de servicio</strong> (Service Workers) y <strong>cachés</strong></li>
+<li>Gestionar almacenamiento offline</li>
+<li>Depurar <strong>PWA (Progressive Web Apps)</strong></li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-herramientas-del-panel-application">🧰 Herramientas del Panel Application<a href="#-herramientas-del-panel-application" class="hash-link" aria-label="Direct link to 🧰 Herramientas del Panel Application" title="Direct link to 🧰 Herramientas del Panel Application">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-cookies">🍪 <strong>Cookies</strong><a href="#-cookies" class="hash-link" aria-label="Direct link to -cookies" title="Direct link to -cookies">​</a></h3>
+<ul>
+<li>Las cookies son pequeños archivos de texto que los sitios web utilizan para almacenar información en el navegador del usuario.</li>
+<li>Puedes ver su <strong>nombre</strong>, <strong>valor</strong>, <strong>fecha de expiración</strong>, <strong>dominio</strong>, <strong>ruta</strong> y <strong>flags</strong> (<code>Secure</code>, <code>HttpOnly</code>, <code>SameSite</code>).</li>
+<li>Ideal para validar <strong>sesiones de usuario</strong>, <strong>autenticación</strong> y <strong>seguimiento de usuarios</strong>.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-private-state-tokens">📇 <strong>Private State Tokens</strong><a href="#-private-state-tokens" class="hash-link" aria-label="Direct link to -private-state-tokens" title="Direct link to -private-state-tokens">​</a></h3>
+<ul>
+<li>Una nueva técnica para autenticar usuarios sin el uso de cookies.</li>
+<li>Sirve para que los servicios puedan verificar la identidad de los usuarios sin usar <strong>cookies de terceros</strong> o <strong>cookies de seguimiento</strong>.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-interest-groups">🌍 <strong>Interest Groups</strong><a href="#-interest-groups" class="hash-link" aria-label="Direct link to -interest-groups" title="Direct link to -interest-groups">​</a></h3>
+<ul>
+<li>Tecnología emergente que permite a los sitios web crear y participar en &quot;grupos de interés&quot; para mejorar la personalización sin comprometer la privacidad.</li>
+<li>Usado principalmente en publicidad y personalización de contenido.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-indexeddb">📂 <strong>IndexedDB</strong><a href="#-indexeddb" class="hash-link" aria-label="Direct link to -indexeddb" title="Direct link to -indexeddb">​</a></h3>
+<ul>
+<li>Es una base de datos NoSQL local que permite almacenar grandes cantidades de datos estructurados de manera asíncrona.</li>
+<li>Soporta <strong>transacciones</strong>, <strong>índices</strong>, y <strong>objetos complejos</strong>.</li>
+<li>Comúnmente utilizado para almacenar <strong>datos offline</strong> en aplicaciones web.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-local-storage">💾 <strong>Local Storage</strong><a href="#-local-storage" class="hash-link" aria-label="Direct link to -local-storage" title="Direct link to -local-storage">​</a></h3>
+<ul>
+<li>Almacenamiento local en el navegador sin fecha de expiración.</li>
+<li>Puedes almacenar datos clave-valor usando <code>localStorage.getItem()</code> y <code>setItem()</code>.</li>
+<li>Útil para guardar configuraciones del usuario, preferencias y pequeños datos de sesión.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-session-storage">🗂️ <strong>Session Storage</strong><a href="#️-session-storage" class="hash-link" aria-label="Direct link to ️-session-storage" title="Direct link to ️-session-storage">​</a></h3>
+<ul>
+<li>Similar a Local Storage, pero con la diferencia de que se borra al cerrar la pestaña del navegador.</li>
+<li>Es útil para almacenar información temporal que solo se necesita durante una sesión de navegación.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-extension-storage">📑 <strong>Extension Storage</strong><a href="#-extension-storage" class="hash-link" aria-label="Direct link to -extension-storage" title="Direct link to -extension-storage">​</a></h3>
+<ul>
+<li>Proporciona almacenamiento a las extensiones de navegador.</li>
+<li>Permite que las extensiones guarden datos entre sesiones y accesos de usuario.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-storage-buckets">🗃️ <strong>Storage Buckets</strong><a href="#️-storage-buckets" class="hash-link" aria-label="Direct link to ️-storage-buckets" title="Direct link to ️-storage-buckets">​</a></h3>
+<ul>
+<li>Una manera de organizar y manejar grandes cantidades de datos almacenados.</li>
+<li>Permite segmentar el almacenamiento para diferentes funcionalidades de la aplicación (por ejemplo, para diferentes módulos de una PWA).</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-shared-storage">🗃️ <strong>Shared Storage</strong><a href="#️-shared-storage" class="hash-link" aria-label="Direct link to ️-shared-storage" title="Direct link to ️-shared-storage">​</a></h3>
+<ul>
+<li>Almacenamiento compartido que permite a las aplicaciones guardar y acceder a datos comunes entre distintos orígenes o aplicaciones.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-service-workers">⚙️ <strong>Service Workers</strong><a href="#️-service-workers" class="hash-link" aria-label="Direct link to ️-service-workers" title="Direct link to ️-service-workers">​</a></h3>
+<ul>
+<li>Un <strong>Service Worker</strong> es un script que tu navegador ejecuta en segundo plano, separado de la página web, lo que permite gestionar <strong>caché</strong>, <strong>notificaciones push</strong>, y <strong>funcionamiento offline</strong>.</li>
+<li>Puedes inspeccionar su estado: si está <strong>instalado</strong>, <strong>activado</strong> o <strong>controlando</strong> la página.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-manifest">📃 <strong>Manifest</strong><a href="#-manifest" class="hash-link" aria-label="Direct link to -manifest" title="Direct link to -manifest">​</a></h3>
+<ul>
+<li>El archivo <strong>manifest.json</strong> es crucial en las <strong>Progressive Web Apps (PWA)</strong>. Define las características de la aplicación, como <strong>nombre</strong>, <strong>iconos</strong>, <strong>tema</strong> y <strong>pantalla de inicio</strong>.</li>
+<li>Se utiliza para permitir que una página web sea instalada en la pantalla de inicio del dispositivo móvil, similar a una aplicación nativa.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-cache-storage">📦 <strong>Cache Storage</strong><a href="#-cache-storage" class="hash-link" aria-label="Direct link to -cache-storage" title="Direct link to -cache-storage">​</a></h3>
+<ul>
+<li>Almacena respuestas de red para que estén disponibles offline.</li>
+<li>Es utilizado principalmente por los <strong>Service Workers</strong> para gestionar el contenido en caché y mejorar la experiencia offline.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-background-services">🔄 <strong>Background Services</strong><a href="#-background-services" class="hash-link" aria-label="Direct link to -background-services" title="Direct link to -background-services">​</a></h3>
+<ul>
+<li>Permiten a las aplicaciones realizar tareas en segundo plano, incluso cuando la aplicación no está activa.</li>
+<li>Incluye:<!-- -->
+<ul>
+<li><strong>Background Fetch</strong>: Permite realizar descargas largas sin interrupciones, incluso si la pestaña se cierra.</li>
+<li><strong>Background Sync</strong>: Sincroniza datos cuando la aplicación vuelve a estar en línea.</li>
+<li><strong>Periodic Background Sync</strong>: Permite que ciertas tareas se sincronicen de forma periódica.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-backforward-cache-bfcache">↩️ <strong>Back/Forward Cache (bfcache)</strong><a href="#️-backforward-cache-bfcache" class="hash-link" aria-label="Direct link to ️-backforward-cache-bfcache" title="Direct link to ️-backforward-cache-bfcache">​</a></h3>
+<ul>
+<li>Cache especial que almacena el estado completo de la página web, permitiendo que la página se recargue instantáneamente cuando el usuario navega hacia atrás o adelante en el navegador.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-background-fetch">🚚 <strong>Background Fetch</strong><a href="#-background-fetch" class="hash-link" aria-label="Direct link to -background-fetch" title="Direct link to -background-fetch">​</a></h3>
+<ul>
+<li>Permite a las aplicaciones realizar descargas largas o de gran tamaño, incluso cuando el usuario cambia de pestaña o cierra la aplicación.</li>
+<li>Se usa principalmente en aplicaciones que requieren la descarga de archivos grandes o muchos archivos a la vez.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-background-sync">🔄 <strong>Background Sync</strong><a href="#-background-sync" class="hash-link" aria-label="Direct link to -background-sync" title="Direct link to -background-sync">​</a></h3>
+<ul>
+<li>Una técnica que permite sincronizar datos en segundo plano cuando el usuario vuelve a estar en línea.</li>
+<li>Esto es útil para aplicaciones que necesitan <strong>sincronizar cambios</strong> sin interrumpir la experiencia del usuario.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-bounce-tracking-mitigation">🛑 <strong>Bounce Tracking Mitigation</strong><a href="#-bounce-tracking-mitigation" class="hash-link" aria-label="Direct link to -bounce-tracking-mitigation" title="Direct link to -bounce-tracking-mitigation">​</a></h3>
+<ul>
+<li>Se utiliza para mitigar los efectos del <strong>bounce tracking</strong>, que es el seguimiento de usuarios en múltiples páginas, para proteger la privacidad del usuario.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-notifications">🔔 <strong>Notifications</strong><a href="#-notifications" class="hash-link" aria-label="Direct link to -notifications" title="Direct link to -notifications">​</a></h3>
+<ul>
+<li>Los <strong>push notifications</strong> permiten enviar notificaciones al usuario, incluso si no están activos en la página o aplicación web.</li>
+<li>Se pueden configurar y controlar mediante los <strong>Service Workers</strong>.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-payment-handler">💳 <strong>Payment Handler</strong><a href="#-payment-handler" class="hash-link" aria-label="Direct link to -payment-handler" title="Direct link to -payment-handler">​</a></h3>
+<ul>
+<li>Permite integrar sistemas de pago web directamente en el navegador.</li>
+<li>Los usuarios pueden realizar pagos sin necesidad de salir de la aplicación.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-periodic-background-sync">🕰️ <strong>Periodic Background Sync</strong><a href="#️-periodic-background-sync" class="hash-link" aria-label="Direct link to ️-periodic-background-sync" title="Direct link to ️-periodic-background-sync">​</a></h3>
+<ul>
+<li>Permite a la aplicación realizar tareas de sincronización programadas, incluso cuando el navegador no está activo.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-speculative-loads">⚡ <strong>Speculative Loads</strong><a href="#-speculative-loads" class="hash-link" aria-label="Direct link to -speculative-loads" title="Direct link to -speculative-loads">​</a></h3>
+<ul>
+<li>Permite que el navegador <strong>cargue</strong> recursos <strong>anticipadamente</strong> (especulativamente) antes de que se necesiten, mejorando la <strong>velocidad de carga</strong>.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-push-messaging">📲 <strong>Push Messaging</strong><a href="#-push-messaging" class="hash-link" aria-label="Direct link to -push-messaging" title="Direct link to -push-messaging">​</a></h3>
+<ul>
+<li>Permite enviar mensajes al navegador del usuario en tiempo real.</li>
+<li>Es una característica importante para aplicaciones que desean enviar notificaciones importantes incluso cuando la aplicación no está abierta.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-reporting-api">📊 <strong>Reporting API</strong><a href="#-reporting-api" class="hash-link" aria-label="Direct link to -reporting-api" title="Direct link to -reporting-api">​</a></h3>
+<ul>
+<li>Permite a las aplicaciones enviar informes sobre problemas de rendimiento o errores que ocurren durante la ejecución de la aplicación.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-frames">📂 <strong>Frames</strong><a href="#-frames" class="hash-link" aria-label="Direct link to -frames" title="Direct link to -frames">​</a></h3>
+<ul>
+<li>Aquí se puede ver información acerca de los <strong>frames</strong> de la página web, como si se están cargando correctamente y cuáles son sus estados.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-pro-tips">💡 Pro Tips<a href="#-pro-tips" class="hash-link" aria-label="Direct link to 💡 Pro Tips" title="Direct link to 💡 Pro Tips">​</a></h2>
+<ul>
+<li><strong>Limpiar almacenamiento</strong>: Puedes usar el botón <strong>Clear Storage</strong> para borrar cookies, almacenamiento local, caché y demás datos persistentes en un solo clic.</li>
+<li><strong>Inspeccionar datos de Service Workers</strong>: Usa la opción <strong>Update</strong> para forzar la actualización de un Service Worker.</li>
+<li><strong>Depurar PWA</strong>: Revisa el estado del <strong>Manifest</strong> y verifica que todos los iconos y configuraciones estén correctamente cargados.</li>
+<li><strong>Sync y Fetch</strong>: Utiliza las herramientas de <strong>Background Sync</strong> y <strong>Background Fetch</strong> para mejorar el rendimiento de tu aplicación, especialmente en condiciones de red lenta.</li>
+</ul>
+<p>📌 <strong>Nota</strong>: Los cambios realizados en el panel <strong>Application</strong> afectan los recursos del navegador directamente, pero no modifican el código fuente del proyecto.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorial-basics/application.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Docusaurus/docs/tutorial-basics/memory"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Memory</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Docusaurus/docs/tutorial-basics/Privacy-and-security"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Privacy and security</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-para-qué-sirve" class="table-of-contents__link toc-highlight">🎯 ¿Para qué sirve?</a></li><li><a href="#-herramientas-del-panel-application" class="table-of-contents__link toc-highlight">🧰 Herramientas del Panel Application</a><ul><li><a href="#-cookies" class="table-of-contents__link toc-highlight">🍪 <strong>Cookies</strong></a></li><li><a href="#-private-state-tokens" class="table-of-contents__link toc-highlight">📇 <strong>Private State Tokens</strong></a></li><li><a href="#-interest-groups" class="table-of-contents__link toc-highlight">🌍 <strong>Interest Groups</strong></a></li><li><a href="#-indexeddb" class="table-of-contents__link toc-highlight">📂 <strong>IndexedDB</strong></a></li><li><a href="#-local-storage" class="table-of-contents__link toc-highlight">💾 <strong>Local Storage</strong></a></li><li><a href="#️-session-storage" class="table-of-contents__link toc-highlight">🗂️ <strong>Session Storage</strong></a></li><li><a href="#-extension-storage" class="table-of-contents__link toc-highlight">📑 <strong>Extension Storage</strong></a></li><li><a href="#️-storage-buckets" class="table-of-contents__link toc-highlight">🗃️ <strong>Storage Buckets</strong></a></li><li><a href="#️-shared-storage" class="table-of-contents__link toc-highlight">🗃️ <strong>Shared Storage</strong></a></li><li><a href="#️-service-workers" class="table-of-contents__link toc-highlight">⚙️ <strong>Service Workers</strong></a></li><li><a href="#-manifest" class="table-of-contents__link toc-highlight">📃 <strong>Manifest</strong></a></li><li><a href="#-cache-storage" class="table-of-contents__link toc-highlight">📦 <strong>Cache Storage</strong></a></li><li><a href="#-background-services" class="table-of-contents__link toc-highlight">🔄 <strong>Background Services</strong></a></li><li><a href="#️-backforward-cache-bfcache" class="table-of-contents__link toc-highlight">↩️ <strong>Back/Forward Cache (bfcache)</strong></a></li><li><a href="#-background-fetch" class="table-of-contents__link toc-highlight">🚚 <strong>Background Fetch</strong></a></li><li><a href="#-background-sync" class="table-of-contents__link toc-highlight">🔄 <strong>Background Sync</strong></a></li><li><a href="#-bounce-tracking-mitigation" class="table-of-contents__link toc-highlight">🛑 <strong>Bounce Tracking Mitigation</strong></a></li><li><a href="#-notifications" class="table-of-contents__link toc-highlight">🔔 <strong>Notifications</strong></a></li><li><a href="#-payment-handler" class="table-of-contents__link toc-highlight">💳 <strong>Payment Handler</strong></a></li><li><a href="#️-periodic-background-sync" class="table-of-contents__link toc-highlight">🕰️ <strong>Periodic Background Sync</strong></a></li><li><a href="#-speculative-loads" class="table-of-contents__link toc-highlight">⚡ <strong>Speculative Loads</strong></a></li><li><a href="#-push-messaging" class="table-of-contents__link toc-highlight">📲 <strong>Push Messaging</strong></a></li><li><a href="#-reporting-api" class="table-of-contents__link toc-highlight">📊 <strong>Reporting API</strong></a></li><li><a href="#-frames" class="table-of-contents__link toc-highlight">📂 <strong>Frames</strong></a></li></ul></li><li><a href="#-pro-tips" class="table-of-contents__link toc-highlight">💡 Pro Tips</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">GitHub</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/AlexsandraRoldan/Docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Inspector<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2025 Alexsandra Roldan. Todos los derechos reservados.</div></div></div></footer></div>
+</body>
+</html>

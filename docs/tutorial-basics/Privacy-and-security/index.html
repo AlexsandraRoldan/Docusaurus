@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-tutorial-basics/Privacy-and-security" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">🛡️ Privacy and Security - Herramientas del Inspector de Chrome | My Site</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://alexsandraroldan.github.io/Docusaurus/img/detective.png"><meta data-rh="true" name="twitter:image" content="https://alexsandraroldan.github.io/Docusaurus/img/detective.png"><meta data-rh="true" property="og:url" content="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/Privacy-and-security"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="🛡️ Privacy and Security - Herramientas del Inspector de Chrome | My Site"><meta data-rh="true" name="description" content="La sección Privacy and Security en las herramientas de desarrollo de Chrome ofrece un conjunto de funcionalidades diseñadas para ayudar a los desarrolladores a entender, gestionar y mejorar la privacidad y seguridad de las aplicaciones web. Esta sección permite inspeccionar detalles sobre cómo se manejan los datos de los usuarios, cómo se asegura la comunicación en línea y cómo se aplican las políticas de seguridad en una aplicación."><meta data-rh="true" property="og:description" content="La sección Privacy and Security en las herramientas de desarrollo de Chrome ofrece un conjunto de funcionalidades diseñadas para ayudar a los desarrolladores a entender, gestionar y mejorar la privacidad y seguridad de las aplicaciones web. Esta sección permite inspeccionar detalles sobre cómo se manejan los datos de los usuarios, cómo se asegura la comunicación en línea y cómo se aplican las políticas de seguridad en una aplicación."><link data-rh="true" rel="icon" href="/Docusaurus/img/detective.png"><link data-rh="true" rel="canonical" href="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/Privacy-and-security"><link data-rh="true" rel="alternate" href="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/Privacy-and-security" hreflang="en"><link data-rh="true" rel="alternate" href="https://alexsandraroldan.github.io/Docusaurus/docs/tutorial-basics/Privacy-and-security" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/Docusaurus/blog/rss.xml" title="My Site RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/Docusaurus/blog/atom.xml" title="My Site Atom Feed"><link rel="stylesheet" href="/Docusaurus/assets/css/styles.b33f71c0.css">
+<script src="/Docusaurus/assets/js/runtime~main.29ed6ae5.js" defer="defer"></script>
+<script src="/Docusaurus/assets/js/main.4d3d0eb6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/Docusaurus/img/detective.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Docusaurus/"><div class="navbar__logo"><img src="/Docusaurus/img/detective.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Docusaurus/img/detective.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Inspector</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Docusaurus/docs/intro">Informacion</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/AlexsandraRoldan/Docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item sidebar-icon-intro"><a class="menu__link" href="/Docusaurus/docs/intro">¿Qué es el Inspector?</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item sidebar-icon-basics"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Docusaurus/docs/tutorial-basics/create-a-document">Herramientas</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/create-a-document">Elements</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/create-a-page">Console</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/create-a-blog-post">Sources</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/deploy-your-site">Network</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/congratulations">Performance</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/memory">Memory</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/application">Application</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Docusaurus/docs/tutorial-basics/Privacy-and-security">Privacy and security</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/Lighthouse">Lighthouse</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Docusaurus/docs/tutorial-basics/Recorder">Recorder</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Docusaurus/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Herramientas</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Privacy and security</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>🛡️ Privacy and Security - Herramientas del Inspector de Chrome</h1></header>
+<p>La sección <strong>Privacy and Security</strong> en las herramientas de desarrollo de Chrome ofrece un conjunto de funcionalidades diseñadas para ayudar a los desarrolladores a entender, gestionar y mejorar la privacidad y seguridad de las aplicaciones web. Esta sección permite inspeccionar detalles sobre cómo se manejan los datos de los usuarios, cómo se asegura la comunicación en línea y cómo se aplican las políticas de seguridad en una aplicación.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-security-overview">🔒 <strong>Security Overview</strong><a href="#-security-overview" class="hash-link" aria-label="Direct link to -security-overview" title="Direct link to -security-overview">​</a></h2>
+<p>La sección <strong>Security Overview</strong> proporciona un análisis general del estado de seguridad de la página web que se está inspeccionando. Aquí se pueden verificar importantes aspectos relacionados con la <strong>cifrado</strong> y la <strong>autenticación</strong>.</p>
+<ul>
+<li><strong>Propiedades claves</strong>:<!-- -->
+<ul>
+<li><strong>Secure Connection</strong>: Muestra si la conexión con el servidor está cifrada correctamente mediante HTTPS.</li>
+<li><strong>Certificado SSL</strong>: Informa si el sitio web tiene un certificado SSL válido y detalles sobre la fecha de expiración del certificado.</li>
+<li><strong>Mixed Content</strong>: Advierte si hay contenido mixto (es decir, contenido HTTP no cifrado cargado en una página HTTPS).</li>
+<li><strong>HSTS (HTTP Strict Transport Security)</strong>: Informa si el sitio web está utilizando HSTS, una política de seguridad que obliga a que las conexiones se realicen a través de HTTPS.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-cookies">🍪 <strong>Cookies</strong><a href="#-cookies" class="hash-link" aria-label="Direct link to -cookies" title="Direct link to -cookies">​</a></h2>
+<p>Las cookies son pequeños archivos que los sitios web guardan en el navegador del usuario. Estas pueden almacenar información sobre la sesión del usuario, preferencias o rastrear su comportamiento.</p>
+<ul>
+<li><strong>Información importante sobre cookies</strong>:<!-- -->
+<ul>
+<li><strong>Secure</strong>: Indica si la cookie solo debe ser enviada a través de una conexión segura (HTTPS).</li>
+<li><strong>HttpOnly</strong>: Previene que la cookie sea accedida mediante JavaScript, protegiéndola de ciertos tipos de ataques, como XSS (Cross-Site Scripting).</li>
+<li><strong>SameSite</strong>: Restringe el envío de cookies en solicitudes entre sitios, ayudando a proteger contra ataques CSRF (Cross-Site Request Forgery).</li>
+</ul>
+</li>
+</ul>
+<p>Puedes ver las cookies almacenadas en la página, editarlas o eliminarlas directamente desde el panel <strong>Privacy and Security</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-mixed-content">🛑 <strong>Mixed Content</strong><a href="#-mixed-content" class="hash-link" aria-label="Direct link to -mixed-content" title="Direct link to -mixed-content">​</a></h2>
+<p>El contenido mixto se refiere a las páginas HTTPS que incluyen recursos que no están cifrados (por ejemplo, imágenes, scripts, hojas de estilo cargadas a través de HTTP). El uso de contenido mixto debilita la seguridad de la página y puede permitir que los atacantes intercepte el tráfico.</p>
+<ul>
+<li><strong>Tipos de contenido mixto</strong>:<!-- -->
+<ul>
+<li><strong>Mixed Active Content</strong>: Recursos que pueden ejecutar código en el navegador, como JavaScript o archivos Flash. Suelen ser más peligrosos.</li>
+<li><strong>Mixed Passive Content</strong>: Recursos como imágenes, que no ejecutan código pero aún son vulnerables a la manipulación.</li>
+</ul>
+</li>
+</ul>
+<p>El panel advierte sobre este tipo de contenido y recomienda que todos los recursos se sirvan a través de HTTPS.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-warnings-and-errors">🚨 <strong>Warnings and Errors</strong><a href="#-warnings-and-errors" class="hash-link" aria-label="Direct link to -warnings-and-errors" title="Direct link to -warnings-and-errors">​</a></h2>
+<p>Esta sección muestra advertencias y errores relacionados con la seguridad de la página web. Las alertas incluyen problemas con las políticas de seguridad, como la falta de <strong>CORS</strong> (Cross-Origin Resource Sharing) adecuado, problemas con las cabeceras HTTP, y violaciones de las políticas de <strong>Content Security Policy (CSP)</strong>.</p>
+<ul>
+<li><strong>Cabeceras de Seguridad Comunes</strong>:<!-- -->
+<ul>
+<li><strong>Content-Security-Policy (CSP)</strong>: Define las políticas sobre qué recursos pueden cargarse en la página y de qué fuentes.</li>
+<li><strong>Strict-Transport-Security (HSTS)</strong>: Forzar la carga de contenido solo a través de HTTPS.</li>
+<li><strong>X-Content-Type-Options</strong>: Previene la detección incorrecta de tipos MIME.</li>
+<li><strong>X-Frame-Options</strong>: Impide que la página se cargue en un <code>iframe</code> desde otro sitio, protegiendo contra ataques clickjacking.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-permissions">🔐 <strong>Permissions</strong><a href="#-permissions" class="hash-link" aria-label="Direct link to -permissions" title="Direct link to -permissions">​</a></h2>
+<p>La sección <strong>Permissions</strong> permite a los desarrolladores gestionar los permisos de los usuarios que están siendo solicitados por la página web, como el acceso a la <strong>ubicación geográfica</strong>, <strong>notificaciones push</strong>, <strong>micrófono</strong>, <strong>cámara</strong>, etc.</p>
+<ul>
+<li><strong>Gestión de permisos</strong>:<!-- -->
+<ul>
+<li><strong>Ubicación</strong>: Ver si la página solicita acceso a la ubicación del usuario.</li>
+<li><strong>Cámara/Micrófono</strong>: Ver si la página solicita acceso a dispositivos como la cámara o el micrófono.</li>
+<li><strong>Notificaciones</strong>: Ver si la página está pidiendo permiso para enviar notificaciones push.</li>
+</ul>
+</li>
+</ul>
+<p>Esta sección ayuda a verificar que la aplicación web está solicitando permisos de forma adecuada y respetuosa con la privacidad del usuario.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-password-protection">🔑 <strong>Password Protection</strong><a href="#-password-protection" class="hash-link" aria-label="Direct link to -password-protection" title="Direct link to -password-protection">​</a></h2>
+<p>En la sección <strong>Password Protection</strong>, puedes revisar cómo las credenciales de usuario están siendo manejadas por el sitio web, incluyendo si las contraseñas están siendo enviadas de manera segura a través de HTTPS.</p>
+<ul>
+<li><strong>Información importante</strong>:<!-- -->
+<ul>
+<li><strong>Contraseñas en texto claro</strong>: Los navegadores alertan si las contraseñas se están enviando sin cifrar (sin HTTPS).</li>
+<li><strong>Autocompletar de formularios</strong>: Revisa si los formularios de inicio de sesión están utilizando el atributo <code>autocomplete=&quot;off&quot;</code> correctamente para proteger la información sensible.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-service-workers-y-seguridad">💻 <strong>Service Workers y Seguridad</strong><a href="#-service-workers-y-seguridad" class="hash-link" aria-label="Direct link to -service-workers-y-seguridad" title="Direct link to -service-workers-y-seguridad">​</a></h2>
+<p>Los <strong>Service Workers</strong> son scripts que corren en segundo plano en el navegador. Pueden interceptar las solicitudes de red y gestionar el almacenamiento en caché, lo que los hace esenciales para la funcionalidad de las <strong>Progressive Web Apps (PWA)</strong>.</p>
+<ul>
+<li><strong>Seguridad de Service Workers</strong>:<!-- -->
+<ul>
+<li>Los <strong>Service Workers</strong> deben estar siempre bajo <strong>HTTPS</strong> para evitar que un atacante los manipule a través de conexiones no seguras.</li>
+<li>Es importante asegurarse de que los <strong>Service Workers</strong> no tengan acceso a recursos o datos sensibles sin la debida autorización.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-security-headers">🧩 <strong>Security Headers</strong><a href="#-security-headers" class="hash-link" aria-label="Direct link to -security-headers" title="Direct link to -security-headers">​</a></h2>
+<p>Las <strong>Security Headers</strong> son cabeceras HTTP que proporcionan una capa adicional de seguridad para proteger las aplicaciones web. Estas cabeceras permiten que el servidor especifique cómo se deben manejar las conexiones y qué recursos pueden cargarse.</p>
+<ul>
+<li><strong>Cabeceras de seguridad importantes</strong>:<!-- -->
+<ul>
+<li><strong>Content-Security-Policy (CSP)</strong>: Especifica qué recursos pueden ser cargados y desde qué fuentes.</li>
+<li><strong>X-Content-Type-Options</strong>: Previene la interpretación incorrecta de los tipos de contenido.</li>
+<li><strong>X-Frame-Options</strong>: Previene que la página se cargue en un <code>iframe</code> de otro dominio.</li>
+<li><strong>Strict-Transport-Security (HSTS)</strong>: Forza a los navegadores a usar solo HTTPS.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-https-y-cifrado">🧩 <strong>HTTPS y Cifrado</strong><a href="#-https-y-cifrado" class="hash-link" aria-label="Direct link to -https-y-cifrado" title="Direct link to -https-y-cifrado">​</a></h2>
+<p>La conexión segura mediante <strong>HTTPS</strong> es fundamental para garantizar la privacidad de los usuarios en la web. El panel <strong>Privacy and Security</strong> te permite ver si la página utiliza HTTPS y si su certificado SSL/TLS es válido.</p>
+<ul>
+<li><strong>Certificado SSL</strong>: Informa si el sitio web tiene un certificado de seguridad válido, necesario para establecer una conexión cifrada.</li>
+<li><strong>Cifrado</strong>: Verifica que la página esté utilizando el protocolo de seguridad adecuado (por ejemplo, TLS 1.2 o TLS 1.3).</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-audit-and-reports">🔐 <strong>Audit and Reports</strong><a href="#-audit-and-reports" class="hash-link" aria-label="Direct link to -audit-and-reports" title="Direct link to -audit-and-reports">​</a></h2>
+<p>La sección de <strong>Auditoría y Reportes</strong> permite realizar análisis de seguridad y generar informes detallados sobre el estado de la seguridad y privacidad de la página web.</p>
+<ul>
+<li><strong>Auditorías de Seguridad</strong>:<!-- -->
+<ul>
+<li>Verifica las prácticas de seguridad, como el uso de HTTPS, la implementación de políticas de seguridad adecuadas, la gestión de cookies, etc.</li>
+</ul>
+</li>
+<li><strong>Generación de Reportes</strong>:<!-- -->
+<ul>
+<li>Los reportes incluyen detalles sobre las violaciones de seguridad y recomendaciones para mejorar la protección de la aplicación web.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-privacy-and-security-best-practices">🏴 <strong>Privacy and Security Best Practices</strong><a href="#-privacy-and-security-best-practices" class="hash-link" aria-label="Direct link to -privacy-and-security-best-practices" title="Direct link to -privacy-and-security-best-practices">​</a></h2>
+<p>Para asegurar que tu aplicación cumpla con los estándares de privacidad y seguridad, sigue las mejores prácticas recomendadas:</p>
+<ol>
+<li><strong>Usa siempre HTTPS</strong> para todas las conexiones y recursos.</li>
+<li><strong>Cifra las contraseñas</strong> antes de almacenarlas o enviarlas.</li>
+<li><strong>Implementa CSP (Content Security Policy)</strong> para evitar inyecciones de código.</li>
+<li><strong>Utiliza cookies seguras</strong>, con las opciones <strong>Secure</strong>, <strong>HttpOnly</strong> y <strong>SameSite</strong>.</li>
+<li><strong>Limita el acceso a la ubicación y otros datos sensibles</strong>, pidiendo permiso explícito al usuario.</li>
+<li><strong>Revisa regularmente los permisos de los usuarios</strong> y solicita solo los necesarios.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-conclusión">👨‍💻 Conclusión<a href="#-conclusión" class="hash-link" aria-label="Direct link to 👨‍💻 Conclusión" title="Direct link to 👨‍💻 Conclusión">​</a></h2>
+<p>Las herramientas de <strong>Privacy and Security</strong> en el Inspector de Chrome son esenciales para garantizar que las aplicaciones web respeten la privacidad del usuario y ofrezcan una experiencia segura. Estas herramientas te permiten identificar y solucionar problemas relacionados con la seguridad y privacidad, lo que a su vez mejora la confianza del usuario y el cumplimiento de las normativas de protección de datos.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorial-basics/Privacy-and-security.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Docusaurus/docs/tutorial-basics/application"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Application</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Docusaurus/docs/tutorial-basics/Lighthouse"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Lighthouse</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-security-overview" class="table-of-contents__link toc-highlight">🔒 <strong>Security Overview</strong></a></li><li><a href="#-cookies" class="table-of-contents__link toc-highlight">🍪 <strong>Cookies</strong></a></li><li><a href="#-mixed-content" class="table-of-contents__link toc-highlight">🛑 <strong>Mixed Content</strong></a></li><li><a href="#-warnings-and-errors" class="table-of-contents__link toc-highlight">🚨 <strong>Warnings and Errors</strong></a></li><li><a href="#-permissions" class="table-of-contents__link toc-highlight">🔐 <strong>Permissions</strong></a></li><li><a href="#-password-protection" class="table-of-contents__link toc-highlight">🔑 <strong>Password Protection</strong></a></li><li><a href="#-service-workers-y-seguridad" class="table-of-contents__link toc-highlight">💻 <strong>Service Workers y Seguridad</strong></a></li><li><a href="#-security-headers" class="table-of-contents__link toc-highlight">🧩 <strong>Security Headers</strong></a></li><li><a href="#-https-y-cifrado" class="table-of-contents__link toc-highlight">🧩 <strong>HTTPS y Cifrado</strong></a></li><li><a href="#-audit-and-reports" class="table-of-contents__link toc-highlight">🔐 <strong>Audit and Reports</strong></a></li><li><a href="#-privacy-and-security-best-practices" class="table-of-contents__link toc-highlight">🏴 <strong>Privacy and Security Best Practices</strong></a></li><li><a href="#-conclusión" class="table-of-contents__link toc-highlight">👨‍💻 Conclusión</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">GitHub</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/AlexsandraRoldan/Docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Inspector<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">© 2025 Alexsandra Roldan. Todos los derechos reservados.</div></div></div></footer></div>
+</body>
+</html>

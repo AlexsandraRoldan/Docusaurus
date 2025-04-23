@@ -1,0 +1,83 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #6a5acd; /* SlateBlue */
+  --ifm-color-primary-dark: #5a4bc0;
+  --ifm-color-primary-darker: #4e43b0;
+  --ifm-color-primary-darkest: #3d3290;
+  --ifm-color-primary-light: #7b6bdb;
+  --ifm-color-primary-lighter: #8c7cea;
+  --ifm-color-primary-lightest: #a99eff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(106, 90, 205, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #82d8ff; /* Light Sky Blue */
+  --ifm-color-primary-dark: #66c9f5;
+  --ifm-color-primary-darker: #4ebfe8;
+  --ifm-color-primary-darkest: #36a9cf;
+  --ifm-color-primary-light: #a0e3ff;
+  --ifm-color-primary-lighter: #b3e9ff;
+  --ifm-color-primary-lightest: #c6efff;
+  --docusaurus-highlighted-code-line-bg: rgba(130, 216, 255, 0.1);
+}
+/* Iconos para la sidebar */
+.sidebar-icon-intro {
+  position: relative;
+  padding-left: 24px !important; /* Espacio para el icono */
+}
+
+.sidebar-icon-intro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Ajusta según el tamaño de tu icono */
+  height: 20px;
+  background-image: url('/img/icon-intro.png'); /* Ruta desde static/ */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Basics */
+.sidebar-icon-basics {
+  position: relative;
+  padding-left: 24px !important;
+}
+.sidebar-icon-basics::before {
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/icon-basics.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Extras */
+.sidebar-icon-extras {
+  position: relative;
+  padding-left: 24px !important;
+}
+.sidebar-icon-extras::before {
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/icon-extras.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
