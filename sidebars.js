@@ -8,15 +8,40 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Herramientas',
+      label: 'Herramientas', // Nombre principal (categoría padre)
       className: 'sidebar-icon-basics',
       items: [
-        'tutorial-basics/create-a-document',
-        'tutorial-basics/create-a-page',
-        'tutorial-basics/create-a-blog-post',
-        'tutorial-basics/deploy-your-site',
-        'tutorial-basics/congratulations',
-      ],
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-document',
+          label: 'Elements', // Nuevo nombre en español
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-page',
+          label: 'Console', 
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/create-a-blog-post',
+          label: 'Sources',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/deploy-your-site',
+          label: 'Network',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/congratulations',
+          label: 'Perfomance',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/memory',
+          label: 'Memory',
+        }
+      ]
     },
     {
       type: 'category',

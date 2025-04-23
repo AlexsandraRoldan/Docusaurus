@@ -1,57 +1,85 @@
 ---
 sidebar_position: 2
+sidebar_label: 'Elements'
 ---
 
-# Create a Document
+# 🛠️ Panel Elements: Tu Inspector de HTML/CSS
 
-Documents are **groups of pages** connected through:
+El panel **Elements** (o **Inspector** en Firefox) es la herramienta principal para analizar y modificar la estructura y estilos de cualquier página web en tiempo real.
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+## 🔍 Funciones clave
 
-## Create your first Doc
+# 1 Inspección de elementos
 
-Create a Markdown file at `docs/hello.md`:
+- Selecciona cualquier elemento de la página haciendo clic en el ícono de flecha (`Ctrl+Shift+C`).
+- Navega el DOM como un árbol interactivo.
 
-```md title="docs/hello.md"
-# Hello
-
-This is my **first Docusaurus document**!
+```html title="Ejemplo de estructura DOM"
+<div class="header">
+    <h1 id="title">Mi Sitio</h1> <!-- ¡Selecciona esto para editarlo! -->
+</div>
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
-
-## Configure the Sidebar
-
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
 ---
 
-# Hello
+## 2 Edición en vivo
+Modifica HTML directamente (doble clic en cualquier elemento).
 
-This is my **first Docusaurus document**!
+Ajusta CSS en el panel Styles:
+
+```css title="Ejemplo de edición CSS"
+/* Cambia estos valores en vivo */
+#title {
+    color: red; /* ¡Pruébalo! */
+    font-size: 2em;
+}
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+## 3 Visualización del Box Model
+Ve márgenes, bordes, padding y contenido:
 
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
 ```
+┌───────────────────────┐
+│       Margin          │
+│  ┌─────────────────┐  │
+│  │     Border      │  │
+│  │  ┌───────────┐  │  │
+│  │  │  Padding  │  │  │
+│  │  │  ┌─────┐  │  │  │
+│  │  │  │Content│  │  │  │
+│  │  │  └─────┘  │  │  │
+│  │  └───────────┘  │  │
+│  └─────────────────┘  │
+└───────────────────────┘
+```
+# 🛠️ Casos de uso prácticos
+Debuggear estilos
+Busca un elemento que no se vea como esperas
+
+Verifica qué reglas CSS se aplican
+
+Identifica propiedades anuladas (tachadas)
+
+Responsive Design
+Usa el Device Toolbar (Ctrl+Shift+M) junto con Elements:
+
+``` 
+js
+// Ejemplo: Oculta elementos en móvil
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+}
+```
+# 💡 Pro Tips
+Undo cambios: Ctrl+Z (los cambios se pierden al refrescar)
+
+Guardar modificaciones: Usa Workspaces para persistir cambios
+
+Acceso rápido:
+
+Alt+Click en un elemento para expandir todo el árbol
+
+H para ocultar elementos temporalmente
+
+📌 Nota: Los cambios solo son locales. Para modificaciones permanentes, debes actualizar tu código fuente.
+
