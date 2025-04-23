@@ -1,23 +1,119 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* Paleta oscura personalizada */
+:root {
+  --primary: #7F5AF0; /* Violeta eléctrico */
+  --primary-dark: #6C4BD9;
+  --accent: #00B4D8; /* Cian brillante */
+  --base: #16161A; /* Fondo principal */
+  --surface: #242629; /* Superficies */
+  --text-primary: #FFFFFE;
+  --text-secondary: #94A1B2;
+}
 
+/* Diseño principal */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 5rem 1rem; /* Reduje el padding vertical y añadí horizontal */
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center; /* Asegura que el texto también esté centrado */
+  background: var(--base);
+  background-image: 
+    radial-gradient(circle at 25% 30%, rgba(127, 90, 240, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 75% 70%, rgba(0, 180, 216, 0.15) 0%, transparent 30%);
+  
+  /* Añade estas propiedades para mayor control */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Asegúrate que el contenedor interno también esté centrado */
+.heroContent {
+  width: 100%;
+  max-width: 1200px; /* O el ancho máximo que prefieras */
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* Botón CTA */
+.ctaButton {
+  background: var(--primary);
+  color: var(--text-primary) !important;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(127, 90, 240, 0.3);
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.ctaButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(127, 90, 240, 0.5);
+}
+
+/* Sección de características */
+.whySection {
+  width: 100%;
+  padding: 4rem 0;
+  background: var(--surface);
+}
+
+.whyTitle {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.whyTitle::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 996px) {
+  .hero__title {
+    font-size: 2.4rem;
   }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
+  .hero__subtitle {
+    font-size: 1.1rem;
+  }
 }

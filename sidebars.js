@@ -63,15 +63,6 @@ const sidebars = {
         },
       ]
     },
-    {
-      type: 'category',
-      label: 'Tutorial - Extras',
-      className: 'sidebar-icon-extras',
-      items: [
-        'tutorial-extras/manage-docs-versions',
-        'tutorial-extras/translate-your-site',
-      ],
-    },
   ],
 };
 

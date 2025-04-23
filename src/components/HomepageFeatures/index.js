@@ -1,63 +1,43 @@
+import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const features = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'Explora el DOM',
+    description: 'El Inspector te permite visualizar y modificar el HTML y CSS en tiempo real. Ideal para depurar y entender la estructura de tu sitio.',
+    icon: '🔍',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'Depura con facilidad',
+    description: 'Analiza errores directamente desde el navegador, accede al panel de consola, performance, red y más.',
+    icon: '🛠️',
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    title: 'Ahorra tiempo',
+    description: 'Haz pruebas sin tocar tu código fuente. Cambia estilos o estructura sobre la marcha.',
+    icon: '⏱️',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description, icon}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+    <div className={clsx(styles.card, 'card')}>
+      <div className={styles.icon}>{icon}</div>
+      <h3 className={clsx(styles.featureTitle, 'text--primary')}>{title}</h3>
+      <p className={clsx(styles.featureDescription, 'text--secondary')}>{description}</p>
     </div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+    <section className={styles.featuresSection}>
+      <div className={styles.cardGrid}>
+        {features.map((feature, idx) => (
+          <Feature key={idx} {...feature} />
+        ))}
       </div>
     </section>
   );

@@ -1,11 +1,51 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+.featuresSection {
+  padding: 4rem 0;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: rgba(40, 42, 54, 0.6);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  background: rgba(50, 52, 64, 0.8);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(138, 43, 226, 0.3);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.featureDescription {
+  color: var(--ifm-font-color-secondary);
+  line-height: 1.6;
+}
+
+/* Modo oscuro */
+[data-theme='dark'] .card {
+  background: var(--ifm-background-surface-color);
 }
