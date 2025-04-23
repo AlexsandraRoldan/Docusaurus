@@ -40,7 +40,27 @@ const sidebars = {
           type: 'doc',
           id: 'tutorial-basics/memory',
           label: 'Memory',
-        }
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/application',
+          label: 'Application',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/Privacy-and-security',
+          label: 'Privacy and security',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/Lighthouse',
+          label: 'Lighthouse',
+        },
+        {
+          type: 'doc',
+          id: 'tutorial-basics/Recorder',
+          label: 'Recorder',
+        },
       ]
     },
     {
