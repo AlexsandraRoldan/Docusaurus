@@ -28,3 +28,57 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+/* Iconos para la sidebar */
+.sidebar-icon-intro {
+  position: relative;
+  padding-left: 24px !important; /* Espacio para el icono */
+}
+
+.sidebar-icon-intro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Ajusta según el tamaño de tu icono */
+  height: 20px;
+  background-image: url('/img/icon-intro.png'); /* Ruta desde static/ */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/* Basics */
+.sidebar-icon-basics {
+  position: relative;
+  padding-left: 24px !important;
+}
+.sidebar-icon-basics::before {
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/icon-basics.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Extras */
+.sidebar-icon-extras {
+  position: relative;
+  padding-left: 24px !important;
+}
+.sidebar-icon-extras::before {
+  content: "" !important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/icon-extras.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
